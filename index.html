@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grow a Garden - Pembayaran Dana</title>
+    <title>Grow a Garden — Pembayaran Dana</title>
     <style>
-        /* Tema Grow & Garden */
-        :root {
-            --green-1: #a8e6cf;
-            --green-2: #dcedc1;
-            --accent: #00a859;
-            --accent-dark: #007f43;
-            --card: #ffffffcc;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(180deg, var(--green-1), var(--green-2));
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to bottom, #a8e6cf, #dcedc1);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: #333;
+            margin: 0;
         }
         .card {
-            background: var(--card);
+            background: #ffffffcc;
             padding: 20px;
-            border-radius: 16px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+            max-width: 350px;
+            width: 100%;
+            border: 3px solid #88d498;
         }
-        .card h1 {
-            color: var(--accent-dark);
+        .title {
+            font-size: 22px;
+            font-weight: bold;
             margin-bottom: 10px;
+            color: #2e7d32;
         }
-        .card p {
-            margin: 10px 0;
-        }
-        .card img {
-            margin: 15px 0;
-            border-radius: 8px;
-            border: 2px solid var(--accent);
+        .leaf {
+            font-size: 28px;
         }
         .btn {
             display: inline-block;
-            background: var(--accent);
+            padding: 12px 24px;
+            background-color: #66bb6a;
             color: white;
-            padding: 10px 20px;
+            border-radius: 10px;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.2s;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+            transition: 0.2s;
         }
         .btn:hover {
-            background: var(--accent-dark);
+            background-color: #57a05c;
+            transform: scale(1.05);
+        }
+        .garden-footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #4e6e58;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>Pembayaran Dana</h1>
-        <p>Scan QR code ini untuk bayar:</p>
-        <img src="qr_dana.png" alt="QR Dana" width="250">
-        <p><a class="btn" href="https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012012023071924414790" target="_blank">
-            Bayar via Dana
-        </a></p>
+        <div class="leaf">🌱</div>
+        <div class="title">Grow a Garden — Pembayaran Dana</div>
+        <p>Terima kasih sudah mendukung! Klik tombol di bawah untuk bayar via Dana dan bantu kebun ini tumbuh lebih besar 🌼.</p>
+        <a href="https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012012023071924414790" class="btn" target="_blank">💙 Bayar via Dana</a>
+        <div class="garden-footer">© 2025 Grow a Garden Theme</div>
     </div>
 </body>
 </html>
