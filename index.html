@@ -1,121 +1,69 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Grow a Garden - Pembayaran Dana</title>
-  <style>
-    /* Simple Grow & Garden theme */
-    :root{
-      --green-1:#a8e6cf;
-      --green-2:#dcedc1;
-      --accent:#00a859; /* warna tombol Dana */
-      --accent-dark:#007f43;
-      --card:#ffffffcc;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background: linear-gradient(180deg,var(--green-1),var(--green-2));
-      color:#184d2a;
-      display:flex;
-      min-height:100vh;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-    }
-    .card{
-      width:100%;
-      max-width:420px;
-      background:var(--card);
-      border-radius:14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-      padding:22px;
-      text-align:center;
-    }
-    header h1{
-      margin:0 0 8px 0;
-      font-size:20px;
-    }
-    .desc{
-      margin:0 0 18px 0;
-      font-size:14px;
-      color:#2c6b3f;
-    }
-    .btn-dana{
-      display:inline-block;
-      text-decoration:none;
-      background:linear-gradient(180deg,var(--accent),var(--accent-dark));
-      color:white;
-      padding:14px 22px;
-      border-radius:12px;
-      font-weight:700;
-      font-size:16px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-      transition: transform .12s ease, box-shadow .12s ease;
-    }
-    .btn-dana:active{ transform: translateY(2px); }
-    .qr-wrap{
-      margin-top:18px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:10px;
-    }
-    .note{
-      font-size:13px;
-      color:#285b36;
-    }
-    footer{
-      margin-top:14px;
-      font-size:12px;
-      color:#285b36;
-      opacity:0.9;
-    }
-
-    /* small leaf decoration top-right */
-    .leaf{
-      position:absolute;
-      right:18px;
-      top:18px;
-      width:56px;
-      height:56px;
-      background-image: url('https://i.ibb.co/N74WQJk/leaf.png');
-      background-size:contain;
-      background-repeat:no-repeat;
-      opacity:.95;
-      transform: rotate(-10deg);
-      pointer-events:none;
-    }
-
-    @media (max-width:420px){
-      .card{ padding:18px; border-radius:12px; }
-    }
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow a Garden - Pembayaran Dana</title>
+    <style>
+        /* Tema Grow & Garden */
+        :root {
+            --green-1: #a8e6cf;
+            --green-2: #dcedc1;
+            --accent: #00a859;
+            --accent-dark: #007f43;
+            --card: #ffffffcc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, var(--green-1), var(--green-2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .card h1 {
+            color: var(--accent-dark);
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin: 10px 0;
+        }
+        .card img {
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 2px solid var(--accent);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: var(--accent-dark);
+        }
+    </style>
 </head>
 <body>
-  <div class="leaf" aria-hidden="true"></div>
-
-  <div class="card" role="main">
-    <header>
-      <h1>🌱 Grow a Garden — Pembayaran Dana</h1>
-    </header>
-
-    <p class="desc">Terima kasih sudah mendukung! Pilih tombol atau scan QR untuk membayar via Dana.</p>
-
-    <!-- Ganti href jika mau link lain; ini sudah berisi link Dana yang kamu berikan -->
-    <a class="btn-dana" href="https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012012023071924414790" target="_blank" rel="noopener noreferrer">
-      💙 Bayar via Dana
-    </a>
-
-    <div class="qr-wrap">
-      <!-- Pastikan file qr_dana.png diupload berdampingan dengan index.html -->
-      <img src="qr_dana.png" alt="QR Code Dana" style="width:210px;max-width:70%;" />
-      <div class="note">Atau scan QR di atas dengan aplikasi Dana.</div>
+    <div class="card">
+        <h1>Pembayaran Dana</h1>
+        <p>Scan QR code ini untuk bayar:</p>
+        <img src="qr_dana.png" alt="QR Dana" width="250">
+        <p><a class="btn" href="https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012012023071924414790" target="_blank">
+            Bayar via Dana
+        </a></p>
     </div>
-
-    <footer>© 2025 Grow a Garden Theme</footer>
-  </div>
 </body>
 </html>
